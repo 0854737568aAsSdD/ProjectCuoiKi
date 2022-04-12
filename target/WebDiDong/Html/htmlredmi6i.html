@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remi 6i</title>
+    <link rel="stylesheet" href="../css/css20.css">
+    <link rel="stylesheet" href="../css/css.css">
+    <link rel="shortcut icon" href="../hinh/python.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var dt = 0;
+                var value = $(this).val().toLowerCase();
+                $("#myList li").filter(function () {
+                    var k = $(this).text().toLowerCase().indexOf(value) > -1;
+                    if (k == true) {
+                        dt += 1
+                        if (dt > 6) { k = false }
+                    }
+                    $(this).toggle(k)
+
+                });
+                $("#myList").attr('style', 'display:block')
+                if ($(this).val() == "") {
+                    $("#myList").attr('style', 'display:none');
+                }
+            });
+            $("#docT").click(function(){
+                    $("#mo").attr("style","display: block")
+                })
+                return true;
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid" style="padding: 0px;">
+
+        <div class="container-fluid" style="padding: 70px 0px 0px 0px;">
+        <nav class="navbar navbar-expand-sm bg-dark justify-content-center fixed-top" id="nav1">
+            <ul class="navbar-nav" id="uln">
+                <a class="navbar-brand" href="#">
+                    <img src="../hinh/htch_image.png" style="width:40px;">
+                </a>
+                <li class="nav-item">
+                    <span>Hệ thống:</span><br>
+                    <span>Cửa hàng bán lẻ</span>
+                </li>
+                <a class="navbar-brand" href="#">
+                    <img src="../hinh/phonehead_image.png" style="width:40px;">
+                </a>
+                <li class="nav-item">
+                    <span>Hotline mua hàng:</span><br>
+                    <span>Gọi ngay: 1900100</span>
+                </li>
+                <a class="navbar-brand" href="#">
+                    <img src="../hinh/user_image.png" style="width:40px;">
+                </a>
+                <li class="nav-item">
+                    <span><a href="../Html/Login.html">Đăng nhập</a></span> <br>
+                    <span><a href="../Html/Login.html">Đăng ký</a></span>
+                </li>
+            </ul>
+            <form style="padding-left: 10%; position: relative;">
+                <div class="input-group mb-3" id="formtk">
+                    <input id="myInput" class="form-control" type="text" placeholder="Tìm kiếm sản phẩm..">
+                    <div class="input-group-append">
+                        <button class="btn btn-light " type="submit">Go</button>
+                    </div>
+                </div>
+                <ul class="listSP bg-light" id="myList">
+                    <li><img src="../hinh/samsung-galaxy-s20-plus-400x460-fix-400x460.png"><a
+                        href="../Html/html20.html">Samsung Galaxy S20+</a></li>
+                <li><img src="../hinh/oppo-a92.jpg"><a href="../Html/html20.html">OPPO A92</a></li>
+                <li><img src="../hinh/iphone-11.jpg"><a href="../Html/html20.html">iPhone 11 64GB</a></li>
+                <li><img src="../hinh/xiaomi-redmi-note-9s.jpg"><a href="../Html/html20.html">Xiaomi Redmi Note 9S
+                </a></li>
+                <li><img src="../hinh/oppo-a52-spec-720x333.jpg"><a href="../Html/html20.html">OPPO A52</a></li>
+                <li><img src="../hinh/nokia-53-den-600x600-400x400.jpg"><a href="../Html/html20.html">Nokia 5.3</a></li>
+                <li><img src="../hinh/realme-6i-trang-600-200x200.jpg"><a href="../Html/html20.html">Realme 6i</a></li>
+                <li><img src="../hinh/samsung-galaxy-fold-black-400x400.jpg"><a href="../Html/html20.html">Samsung
+                        Galaxy Fold</a></li>
+                <li><img src="../hinh/iphone-11-pro-max-512gb-gold-400x400.jpg"><a href="../Html/html20.html">iPhone
+                        11 Pro Max 512GB</a></li>
+                <li><img src="../hinh/iphone-11-pro-256gb-black-400x400.jpg"><a href="../Html/html20.html">iPhone 11
+                        Pro Max 256GB</a></li>
+                <li><img src="../hinh/samsung-galaxy-z-flip-den-600x600-400x400.jpg"><a
+                        href="../Html/html20.html">Samsung Galaxy Z Flip</a></li>
+                <li><img src="../hinh/iphone-11-pro-256gb-black-400x400.jpg"><a href="../Html/html20.html">iPhone 11
+                        Pro 256GB</a></li>
+                <li><img src="../hinh/iphone-11-pro-max-green-400x400.jpg"><a href="../Html/html20.html">iPhone 11
+                        Pro Max 64GB</a></li>
+                <li><img src="../hinh/iphone-xs-max-256gb-white-400x400.jpg"><a href="../Html/html20.html">iPhone Xs
+                        Max 256GB</a></li>
+                <li><img src="../hinh/samsung-galaxy-s20-ultra-600x600-1-400x400.jpg"><a
+                        href="../Html/html20.html">Samsung Galaxy S20 Ultra</a></li>
+                <li><img src="../hinh/samsung-galaxy-note-10-plus-blue-400x400.jpg"><a
+                        href="../Html/html20.html">Samsung Galaxy Note 10+</a></li>
+                <li><img src="../hinh/iphone-xs-max-gold-400x400.jpg"><a href="../Html/html20.html">iPhone Xs Max
+                        64GB</a></li>
+                <li><img src="../hinh/iphone-11-256gb-black-400x400.jpg"><a href="../Html/html20.html">iPhone 11
+                        256GB</a></li>
+                <li><img src="../hinh/iphone-xs-max-256gb-white-400x400.jpg"><a href="../Html/html20.html">iPhone Xs
+                        256GB</a></li>
+                <li><img src="../hinh/huawei-p40-pro-600x600-3-400x400.jpg"><a href="../Html/html20.html">Huawei P40
+                        Pro</a></li>
+                <li><img src="../hinh/oppo-find-x2-blue-600x600-400x400.jpg"><a href="../Html/html20.html">OPPO Find
+                        X2</a></li>
+                <li><img src="../hinh/blackberry-key2-4-400x400.jpg"><a href="../Html/html20.html">BlackBerry KEY2
+                </a></li>
+                </ul>
+            </form>
+        </nav>
+    <div >
+        <nav class="navbar bg-dark justify-content-center" id="nav2">
+            <ul class="nav " id="reponsive">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html/Home.html">TRANG CHỦ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html/About.html">GIỚI THIỆU</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html/Products.html">SẢN PHẨM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">TIN TỨC</a>
+                </li>
+                <li class="nav-item" id="logo"><a class="nav-link"  href="../Html/Home.html"><img style="height: 80px; border-radius: 50px; margin: 0 10px;"
+                    src="../hinh/python.jpg"></a></li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">DỊCH VỤ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">NHƯỢNG QUYỀN </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">THANH TOÁN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">LIÊN HỆ</a>
+                </li>
+            </ul>
+        </nav>
+        <section >
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../Html/Home.html">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="../Html/Products.html">Sản phẩm</a></li>
+                <li class="breadcrumb-item active">Remi 6i</li>
+            </ul>
+            <div class="rowtop">
+                <h2>Điện thoại Remi 6i</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="padding-left: 0px; padding-top: 50px;">
+                    <img style="height: 50%;" src="../hinh/realme-6i-trang-600-200x200.jpg">
+                </div>
+                <div class="col-md-5">
+                    <aside class="price_sale">
+                        <div class="area_price">
+                            <strong style="color: #e10c00; font-size: 25px;">6.990.000₫ </strong>
+                            <label> Trả góp 0%</label>
+                        </div>
+                        <div class="area_promotion">
+                            <strong style="font-size: 130%;">Khuyến mãi</strong>
+                            <ul class="nav">
+
+                                <li class="nav-item">
+                                    <img src="../hinh/tick.png"> Giảm ngay 7 triệu (áp dụng đặt và nhận hàng từ 19 -
+                                    21/6) (đã trừ vào giá)<A href="#"> (click xem chi tiết)</A>
+                                </li>
+                                <li class="nav-item">
+                                    <img src="../hinh/tick.png"> Trả góp 0% thẻ tín dụng <A href="#"> (click xem chi
+                                        tiết)</A>
+                                </li>
+                                <li class="nav-item">
+                                    <img src="../hinh/tick.png"> Ưu đãi phòng chờ thương gia <a href="#">(click xem chi
+                                        tiết)</a>
+                                </li>
+                                <li class="nav-item">
+                                    <img src="../hinh/tick.png"> Tặng 2 suất mua Đồng hồ thời trang giảm 40% (không áp
+                                    dụng thêm khuyến mãi khác)
+                                    <A href="#" target=_blank>(click xem chi tiết)</A>
+                                </li>
+                                <li class="nav-item">
+                                    <img src="../hinh/tick.png">Tặng suất mua đồng hồ Samsung Active 2 giảm đến
+                                    3.000.000đ
+                                    <A href="#" target=_blank>(click xem chi tiết)</A>
+                                </li>
+                            </ul>
+                            <div class="dichV">
+                                <strong>Chọn dịch vụ thêm</strong>
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        <input type="checkbox"> <a>Giao ngay từ cửa hàng gần bạn nhất</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <input type="checkbox"> <a>Chuyển danh bạ, dữ liệu qua máy mới</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <input type="checkbox"> <a>Mang nhiều màu để bạn lựa chọn</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <input type="checkbox"> <a>Mang thêm điện thoại khác để bạn xem</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="area_order ">
+                            <div class="col-md-12" style="margin-top:30px; margin-bottom: 15px; padding: 0px;">
+                                <button type="button" class="btn btn-warning btn-block">
+                                    <p style="font-size:20px ;"><b>Mua ngay</b></p>
+                                    <p>Giao tận nơi hoặc nhận tại siêu thị</p>
+                                </button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" style="padding-left: 0px;">
+                                    <button type="button" class="btn btn-primary btn-block">
+                                        <p style="font-size:18px ;"><b>Mua trả góp 0%</b></p>
+                                        <p>Thủ tục đơn giản</p>
+                                    </button>
+                                </div>
+                                <div class="col-md-6" style="padding-right: 0px;">
+                                    <button type="button" class="btn btn-primary btn-block">
+                                        <p style="font-size:18px ;"><b>Trả góp qua thẻ</b></p>
+                                        <p>Visa, Master, JCB</p>
+                                    </button>
+                                </div>
+                            </div>
+                            <p style="text-align: center; color: black;">Gọi đặt mua: <a href="#">1900.100</a> (miễn phí
+                                - 7:30-22:00)</p>
+                        </div>
+                    </aside>
+                </div>
+                <div class="col-md-3">
+                    <A href="#"> Kiểm tra hàng tại nơi bạn ở không?</A>
+                    <div class="right_info">
+                        <ul class="nav ">
+                            <li class="nav-item">
+                                Bộ sản phẩm gồm: <a href="#"> Sạc, Tai nghe, S&#225;ch hướng dẫn, Hộp, C&#226;y lấy sim,
+                                    Ốplưng, C&#225;p.</a>
+                            </li>
+                            <li class="nav-item"> Bảo hành chính hãng 12 tháng. </li>
+                            <li class="nav-item" style="border: none;">
+                                Lỗi là đổi mới trong 1 tháng tại hơn 2026 siêu thị toàn quốc
+                                <a href="#">(click xem chi tiết)</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="productOld">
+                        <a class="viewold" target="_blank" href="#">Xem Remi 6i cũ </a>
+                        <p style="margin-bottom:0px;">Giá dưới: <strong style="color: #e10c00;">4.000.000₫</strong></p>
+                        <p style="margin-bottom:0px;">Bảo hành tới 11.5 th&#225;ng</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row box_content">
+                <aside class="col-md-9 ">
+                    <article>
+                        <h2><a href="../hinh/oppo-a92.jpg">Remi 6i</a> là mẫu <a
+                            href="../hinh/oppo-a92.jpg" >smartphone</a> tầm trung
+                            vừa được <a href="../hinh/oppo-a92.jpg" >OPPO</a> ra mắt đầu
+                            tháng 5/2020. Chiếc điện thoại gây ấn tượng với thiết kế màn hình khoét lỗ tràn
+                            viền, cụm 4 camera ấn tượng và được bán với mức giá vô cùng phải chăng.</h2>
+                        <h3 style="margin-top:30px">Hiệu năng mạnh mẽ trên Snapdragon</h3>
+                        <p>Remi 6i được trang bị cho mình con chip Snapdragon 665 mạnh mẽ cho hiệu năng cao, xử lý đa nhiệm mượt mà, “cân” tốt các tựa game mobile hiện hành.</p>
+                        <p><a href="../hinh/oppo-a92.jpg">
+                                <img src="../hinh/oppo-a92-tgdd-7.jpg"></a></p>
+                        <div id="mo" style="display: none;">
+                        <p>Màn hình Galaxy S20+ có kích thước 6.7 inch độ phân giải 2K (1440 x 3200 Pixels) sử
+                            dụng tấm nền Dynamic AMOLED 2X với khả năng hiển thị màu sắc sắc nét, độ chi tiết cao và
+                            sống động.</p>
+                        <p>Khung máy được hoàn thiện một cách tỉ mỉ, độ chính xác cao với viền màn hình đã
+                            được thiết kế cong nhẹ cho cảm giác dễ dàng cầm nắm, không bị cấn tay hay vô tình chạm vào
+                            màn hình.</p>
+                        <p><a href="../hinh/samsung-galaxy-s20-plus4-1.jpg"><img
+                                    src="../hinh/samsung-galaxy-s20-plus4-1.jpg"></a></p>
+                        <p>Điểm nổi bật trên chiếc điện thoại Samsung Galaxy S20 Plus chính là việc trang bị
+                            màn hình <a>Infinity O</a> tràn viền ra bốn cạnh với tỷ lệ diện tích hiển thị lên tới 90.5%.
+                        </p>
+                        <p>Tần số quét màn hình lên đến 120 Hz cho cảm giác phản hồi nhanh, dường như không có
+                            độ trễ. Người dùng có thể điều chỉnh giữa 60 và 120 Hz để tiết kiệm năng lượng pin cho máy.
+                        </p>
+                        <p><a><img src="../hinh/samsung-galaxy-s20-plus6.jpg"></a></p>
+                        <p>Bên cạnh đó màn hình của máy còn hỗ trợ công nghệ hiển thị HDR10+ mang đến những
+                            thước phim giải trí hay những pha hành động combat được tái hiện một cách sống động, chân
+                            thực cùng trải nghiệm thao tác siêu mượt mà.</p>
+                        </div>
+                    </article>
+                    <p class="show-more text-center">
+                        <button id="docT" class="btn btn-info dropdown-toggle">Đọc thêm</button>
+                    </p>
+
+
+                    <div class="bottom_order ">
+                        <div class="row">
+                            <div class="col-md-1" style="padding: 0px;">
+                                <img width="70" src="../hinh/realme-6i-trang-600-200x200.jpg">
+                            </div>
+                            <div class="col-md-3">
+                                <h4>Điện thoại Remi 6i</h4>
+                                <strong style="color: #e10c00;">6.990.000₫</strong>
+                            </div>
+
+
+                            <div class="col-md-2">
+                                <button class="btn btn-warning btn-block" style="color: white;" type="button"> Mua
+                                    ngay</button>
+                            </div>
+
+                            <div class="col-md-3">
+                                <button class="btn btn-primary btn-block">Mua trả góp 0%</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-primary btn-block">Trả góp qua thẻ</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </aside>
+                <aside class="col-md-3 tableparameter" style="padding: 0px;">
+                    <h2>Thông số kỹ thuật</h2>
+                    <ul class="parameter ">
+                        <li>
+                            <span>Màn hình:</span>
+                            <div>Dynamic AMOLED 2X, 6.7", <a href='#'>Quad HD+ (2K+)</a></div>
+                        </li>
+                        <li>
+                            <span>Hệ điều hành:</span>
+                            <div><a href='#'>Android 10</a></div>
+                        </li>
+                        <li>
+                            <span>Camera sau:</span>
+                            <div>Chính 12 MP & Phụ 64 MP, 12 MP, TOF 3D</div>
+                        </li>
+                        <li>
+                            <span>Camera trước:</span>
+                            <div>10 MP</div>
+                        </li>
+                        <li>
+                            <span>CPU:</span>
+                            <div><a href='#'>Exynos 990 8 nhân</a></div>
+                        </li>
+                        <li>
+                            <span>RAM:</span>
+                            <div>8 GB</div>
+                        </li>
+                        <li>
+                            <span>Bộ nhớ trong:</span>
+                            <div>128 GB</div>
+                        </li>
+                        <li>
+                            <span>Thẻ nhớ:</span>
+                            <div><a href='#'>MicroSD, hỗ trợ tối đa 1 TB</a></div>
+                        </li>
+                        <li>
+                            <span>Thẻ SIM:</span>
+                            <div><a href='#'>2 SIM Nano (SIM 2 chung khe thẻ nhớ)</a>, <ahref='#'>Hỗ trợ 4G</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Dung lượng pin:</span>
+                            <div>4500 mAh, có sạc nhanh</div>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-block">Xem thêm cấu hình chi tiết</button>
+                </aside>
+            </div>
+        </section>
+        <footer class="navbar navbar-expand-sm bg-dark" id="footer">
+            <div class="col-md-1 ">
+                <a>
+                    <img src="../hinh/python.jpg">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#">Chính sách bảo hành</a> <br>
+                <a href="#">Chính sách đổi trả</a>
+            </div>
+            <div class="col-md-2">
+                <a href="#">Hướng dẫn mua online</a> <br>
+                <a href="#">Nội quy cửa hàng</a>
+            </div>
+            <div class="col-md-2">
+                <a href="#">Phương thức thanh toán</a> <br>
+                <a href="#">Phương thức vận chuyển</a>
+            </div>
+            <div class="col-md-1">
+                <a href="#">Liên hệ</a> <br>
+                <a href="#">Tính Nguyễn</a>
+            </div>
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-3" id="imgf">
+                <a href=""><img src="../hinh/fb.png"> </a>
+                <a href=""><img src="../hinh/tw.png"> </a>
+                <a href=""><img src="../hinh/y.png"> </a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
